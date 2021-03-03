@@ -1,7 +1,10 @@
-syntax="proto3";
-option java_package = "com.rams.proto.data";
+syntax = "proto3";
+package com.rams.proto;
+
+option java_package = "com.rams.data";
 option java_multiple_files = true;
-service HService {
+
+service Ram {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
@@ -13,5 +16,5 @@ message HelloRequest {
 
 // The response message containing the greetings
 message HelloReply {
-  string name = 1;
+  string name =1;
 }

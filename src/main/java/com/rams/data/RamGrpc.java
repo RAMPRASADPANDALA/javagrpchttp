@@ -1,4 +1,4 @@
-package com.rams.proto.data;
+package com.rams.data;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -19,38 +19,38 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.32.1)",
-    comments = "Source: com/rams/proto/HelloService.proto")
-public final class HServiceGrpc {
+    comments = "Source: com/rams/proto/Ram.proto")
+public final class RamGrpc {
 
-  private HServiceGrpc() {}
+  private RamGrpc() {}
 
-  public static final String SERVICE_NAME = "HService";
+  public static final String SERVICE_NAME = "com.rams.proto.Ram";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.rams.proto.data.HelloRequest,
-      com.rams.proto.data.HelloReply> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<com.rams.data.HelloRequest,
+      com.rams.data.HelloReply> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = com.rams.proto.data.HelloRequest.class,
-      responseType = com.rams.proto.data.HelloReply.class,
+      requestType = com.rams.data.HelloRequest.class,
+      responseType = com.rams.data.HelloReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.rams.proto.data.HelloRequest,
-      com.rams.proto.data.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<com.rams.proto.data.HelloRequest, com.rams.proto.data.HelloReply> getSayHelloMethod;
-    if ((getSayHelloMethod = HServiceGrpc.getSayHelloMethod) == null) {
-      synchronized (HServiceGrpc.class) {
-        if ((getSayHelloMethod = HServiceGrpc.getSayHelloMethod) == null) {
-          HServiceGrpc.getSayHelloMethod = getSayHelloMethod =
-              io.grpc.MethodDescriptor.<com.rams.proto.data.HelloRequest, com.rams.proto.data.HelloReply>newBuilder()
+  public static io.grpc.MethodDescriptor<com.rams.data.HelloRequest,
+      com.rams.data.HelloReply> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<com.rams.data.HelloRequest, com.rams.data.HelloReply> getSayHelloMethod;
+    if ((getSayHelloMethod = RamGrpc.getSayHelloMethod) == null) {
+      synchronized (RamGrpc.class) {
+        if ((getSayHelloMethod = RamGrpc.getSayHelloMethod) == null) {
+          RamGrpc.getSayHelloMethod = getSayHelloMethod =
+              io.grpc.MethodDescriptor.<com.rams.data.HelloRequest, com.rams.data.HelloReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rams.proto.data.HelloRequest.getDefaultInstance()))
+                  com.rams.data.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.rams.proto.data.HelloReply.getDefaultInstance()))
-              .setSchemaDescriptor(new HServiceMethodDescriptorSupplier("SayHello"))
+                  com.rams.data.HelloReply.getDefaultInstance()))
+              .setSchemaDescriptor(new RamMethodDescriptorSupplier("SayHello"))
               .build();
         }
       }
@@ -61,58 +61,58 @@ public final class HServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static HServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<HServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<HServiceStub>() {
+  public static RamStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RamStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RamStub>() {
         @java.lang.Override
-        public HServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new HServiceStub(channel, callOptions);
+        public RamStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RamStub(channel, callOptions);
         }
       };
-    return HServiceStub.newStub(factory, channel);
+    return RamStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static HServiceBlockingStub newBlockingStub(
+  public static RamBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<HServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<HServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<RamBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RamBlockingStub>() {
         @java.lang.Override
-        public HServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new HServiceBlockingStub(channel, callOptions);
+        public RamBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RamBlockingStub(channel, callOptions);
         }
       };
-    return HServiceBlockingStub.newStub(factory, channel);
+    return RamBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static HServiceFutureStub newFutureStub(
+  public static RamFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<HServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<HServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<RamFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RamFutureStub>() {
         @java.lang.Override
-        public HServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new HServiceFutureStub(channel, callOptions);
+        public RamFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RamFutureStub(channel, callOptions);
         }
       };
-    return HServiceFutureStub.newStub(factory, channel);
+    return RamFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class HServiceImplBase implements io.grpc.BindableService {
+  public static abstract class RamImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(com.rams.proto.data.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.rams.proto.data.HelloReply> responseObserver) {
+    public void sayHello(com.rams.data.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.rams.data.HelloReply> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -122,8 +122,8 @@ public final class HServiceGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.rams.proto.data.HelloRequest,
-                com.rams.proto.data.HelloReply>(
+                com.rams.data.HelloRequest,
+                com.rams.data.HelloReply>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -131,16 +131,16 @@ public final class HServiceGrpc {
 
   /**
    */
-  public static final class HServiceStub extends io.grpc.stub.AbstractAsyncStub<HServiceStub> {
-    private HServiceStub(
+  public static final class RamStub extends io.grpc.stub.AbstractAsyncStub<RamStub> {
+    private RamStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HServiceStub build(
+    protected RamStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new HServiceStub(channel, callOptions);
+      return new RamStub(channel, callOptions);
     }
 
     /**
@@ -148,8 +148,8 @@ public final class HServiceGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(com.rams.proto.data.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.rams.proto.data.HelloReply> responseObserver) {
+    public void sayHello(com.rams.data.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.rams.data.HelloReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -157,16 +157,16 @@ public final class HServiceGrpc {
 
   /**
    */
-  public static final class HServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HServiceBlockingStub> {
-    private HServiceBlockingStub(
+  public static final class RamBlockingStub extends io.grpc.stub.AbstractBlockingStub<RamBlockingStub> {
+    private RamBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HServiceBlockingStub build(
+    protected RamBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new HServiceBlockingStub(channel, callOptions);
+      return new RamBlockingStub(channel, callOptions);
     }
 
     /**
@@ -174,7 +174,7 @@ public final class HServiceGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.rams.proto.data.HelloReply sayHello(com.rams.proto.data.HelloRequest request) {
+    public com.rams.data.HelloReply sayHello(com.rams.data.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -182,16 +182,16 @@ public final class HServiceGrpc {
 
   /**
    */
-  public static final class HServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HServiceFutureStub> {
-    private HServiceFutureStub(
+  public static final class RamFutureStub extends io.grpc.stub.AbstractFutureStub<RamFutureStub> {
+    private RamFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected HServiceFutureStub build(
+    protected RamFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new HServiceFutureStub(channel, callOptions);
+      return new RamFutureStub(channel, callOptions);
     }
 
     /**
@@ -199,8 +199,8 @@ public final class HServiceGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.rams.proto.data.HelloReply> sayHello(
-        com.rams.proto.data.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.rams.data.HelloReply> sayHello(
+        com.rams.data.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -213,10 +213,10 @@ public final class HServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final HServiceImplBase serviceImpl;
+    private final RamImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(HServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(RamImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -226,8 +226,8 @@ public final class HServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((com.rams.proto.data.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.rams.proto.data.HelloReply>) responseObserver);
+          serviceImpl.sayHello((com.rams.data.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.rams.data.HelloReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -245,32 +245,32 @@ public final class HServiceGrpc {
     }
   }
 
-  private static abstract class HServiceBaseDescriptorSupplier
+  private static abstract class RamBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    HServiceBaseDescriptorSupplier() {}
+    RamBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.rams.proto.data.HelloService.getDescriptor();
+      return com.rams.data.RamOuterClass.getDescriptor();
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("HService");
+      return getFileDescriptor().findServiceByName("Ram");
     }
   }
 
-  private static final class HServiceFileDescriptorSupplier
-      extends HServiceBaseDescriptorSupplier {
-    HServiceFileDescriptorSupplier() {}
+  private static final class RamFileDescriptorSupplier
+      extends RamBaseDescriptorSupplier {
+    RamFileDescriptorSupplier() {}
   }
 
-  private static final class HServiceMethodDescriptorSupplier
-      extends HServiceBaseDescriptorSupplier
+  private static final class RamMethodDescriptorSupplier
+      extends RamBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    HServiceMethodDescriptorSupplier(String methodName) {
+    RamMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -285,11 +285,11 @@ public final class HServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (HServiceGrpc.class) {
+      synchronized (RamGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new HServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new RamFileDescriptorSupplier())
               .addMethod(getSayHelloMethod())
               .build();
         }
